@@ -37,7 +37,7 @@ const MyBlogs = () => {
   const fetchBlogs = async (userId) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/v1/blog/user-blog/${userId}`
+        `https://blog-website-backend-ashy.vercel.app/api/v1/blog/user-blog/${userId}`
       );
       setBlogs(response.data.blogs);
     } catch (error) {
@@ -47,7 +47,7 @@ const MyBlogs = () => {
 
   const handleDelete = async (blogId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/v1/blog/delete-blog/${blogId}`);
+      await axios.delete(`https://blog-website-backend-ashy.vercel.app/api/v1/blog/delete-blog/${blogId}`);
       setBlogs(blogs.filter((blog) => blog._id !== blogId));
     } catch (error) {
       console.error("Failed to delete blog", error);
@@ -71,7 +71,7 @@ const MyBlogs = () => {
         image: editImage,
       };
       const response = await axios.put(
-        `http://localhost:5000/api/v1/blog/update-blog/${selectedBlog._id}`,
+        `https://blog-website-backend-ashy.vercel.app/api/v1/blog/update-blog/${selectedBlog._id}`,
         updatedBlog
       );
       setBlogs(

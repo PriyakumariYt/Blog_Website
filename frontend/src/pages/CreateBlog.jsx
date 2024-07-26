@@ -16,7 +16,7 @@ const navigate = useNavigate()
     const token = localStorage.getItem('token'); 
 
     try {
-      const response = await axios.post('http://localhost:5000/api/v1/blog/create-blog', {
+      const response = await axios.post('https://blog-website-backend-ashy.vercel.app/api/v1/blog/create-blog', {
         title,
         description,
         image,

@@ -27,7 +27,7 @@ USER AUTHENTICATION LOGIC
   const userAuthentication = async () => {
     try {
       setIsLoading(true)
-      const response = await fetch("http://localhost:5000/api/v1/auth/user", {
+      const response = await fetch("https://blog-website-backend-ashy.vercel.app/api/v1/auth/user", {
         method: "GET",
         headers: {
           Authorization: authorizationToken,
